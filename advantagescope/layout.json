@@ -1,0 +1,153 @@
+{
+  "hubs": [
+    {
+      "x": 0,
+      "y": 0,
+      "width": 1500,
+      "height": 820,
+      "state": {
+        "sidebar": {
+          "width": 264,
+          "expanded": [
+            "/AdvantageKit",
+            "/RealOutputs",
+            "/RealOutputs/Arm"
+          ]
+        },
+        "tabs": {
+          "selected": 1,
+          "tabs": [
+            {
+              "type": 0,
+              "title": "",
+              "controller": null,
+              "controllerUUID": "1515cacc389d433fb4efbdf8b90898ee",
+              "renderer": "",
+              "controlsHeight": 0
+            },
+            {
+              "type": 3,
+              "title": "Braco 3D",
+              "controller": {
+                "sources": [
+                  {
+                    "type": "robot",
+                    "logKey": "/RealOutputs/Robo/Pose",
+                    "logType": "Pose2d",
+                    "visible": true,
+                    "options": {
+                      "model": "Braco 2 estagios"
+                    }
+                  },
+                  {
+                    "type": "component",
+                    "logKey": "/RealOutputs/Arm/PosesComponentes",
+                    "logType": "Pose3d[]",
+                    "visible": true,
+                    "options": {}
+                  },
+                  {
+                    "type": "gamePiece",
+                    "logKey": "/RealOutputs/Jogo/Algas",
+                    "logType": "Pose3d[]",
+                    "visible": true,
+                    "options": {
+                      "variant": "Algae"
+                    }
+                  }
+                ],
+                "game": "FRC:2025 Field (AndyMark)"
+              },
+              "controllerUUID": "7a40dc678c82417db13ab7fab95510f0",
+              "renderer": null,
+              "controlsHeight": 200
+            },
+            {
+              "type": 10,
+              "title": "Braco 2D",
+              "controller": [
+                {
+                  "type": "mechanism",
+                  "logKey": "/RealOutputs/Arm/Mechanism2d",
+                  "logType": "Mechanism2d",
+                  "visible": true,
+                  "options": {}
+                }
+              ],
+              "controllerUUID": "42cd133cf21f430a85073073ee614e0f",
+              "renderer": null,
+              "controlsHeight": 200
+            },
+            {
+              "type": 1,
+              "title": "Angulos",
+              "controller": {
+                "leftSources": [
+                  {
+                    "type": "smooth",
+                    "logKey": "/RealOutputs/Arm/OmbroGraus",
+                    "logType": "Number",
+                    "visible": true,
+                    "options": {
+                      "color": "#2b66a2",
+                      "size": "normal"
+                    }
+                  },
+                  {
+                    "type": "smooth",
+                    "logKey": "/RealOutputs/Arm/EixoGraus",
+                    "logType": "Number",
+                    "visible": true,
+                    "options": {
+                      "color": "#e5b31b",
+                      "size": "normal"
+                    }
+                  },
+                  {
+                    "type": "smooth",
+                    "logKey": "/RealOutputs/Arm/PontaRelGraus",
+                    "logType": "Number",
+                    "visible": true,
+                    "options": {
+                      "color": "#af2437",
+                      "size": "normal"
+                    }
+                  },
+                  {
+                    "type": "smooth",
+                    "logKey": "/RealOutputs/Arm/PontaAbsolutaGraus",
+                    "logType": "Number",
+                    "visible": true,
+                    "options": {
+                      "color": "#80588e",
+                      "size": "normal"
+                    }
+                  }
+                ],
+                "rightSources": [],
+                "discreteSources": [],
+                "leftLockedRange": null,
+                "rightLockedRange": null,
+                "leftUnitConversion": {
+                  "autoTarget": null,
+                  "preset": null
+                },
+                "rightUnitConversion": {
+                  "autoTarget": null,
+                  "preset": null
+                },
+                "leftFilter": 0,
+                "rightFilter": 0
+              },
+              "controllerUUID": "e455d360734647c1bce2d3b3a8c9287c",
+              "renderer": null,
+              "controlsHeight": 200
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "satellites": [],
+  "version": "26.0.0"
+}
