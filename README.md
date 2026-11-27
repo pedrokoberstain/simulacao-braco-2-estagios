@@ -71,7 +71,22 @@ Em **NetworkTables > SmartDashboard** ficam os testes do acoplamento, os alvos e
 
 ## Modelo 3D e AdvantageScope
 
-Os arquivos GLB **não são versionados**. Gere-os uma vez:
+### Instalar o modelo (recomendado)
+
+1. No Windows, aperte **Win + R** e abra `%APPDATA%\AdvantageScope\userAssets`
+   (se a pasta não existir, abra o AdvantageScope uma vez).
+2. Extraia [`modelo3d/Robot_Braco2Estagios.zip`](modelo3d/Robot_Braco2Estagios.zip) dentro dela.
+   Deve ficar `userAssets\Robot_Braco2Estagios\config.json`, junto dos três arquivos `.glb`.
+3. Feche e abra o AdvantageScope.
+
+### Visualizar
+
+1. Com a simulação aberta, use **File > Connect to Simulator**.
+2. Use **File > Import Layout** e escolha `advantagescope/layout.json`.
+
+### Gerar o modelo de novo (opcional)
+
+Necessário só se o CAD mudar:
 
 1. Abra o CAD do braço (veja [Créditos](#créditos)) no Onshape e exporte a aba
    **Full W/ (2023)End effecter** como **GLB**, com o eixo Z para cima.
@@ -81,12 +96,9 @@ Os arquivos GLB **não são versionados**. Gere-os uma vez:
    python tools/separar_glb.py "caminho/do/arquivo.glb"
    ```
 
-   Ele grava `model.glb`, `model_0.glb`, `model_1.glb` e `config.json` em
-   `%APPDATA%\AdvantageScope\userAssets\Robot_Braco2Estagios`, troca os módulos swerve do CAD por
-   rodas de tank e alinha cada estágio no seu pivô.
-3. Feche e abra o AdvantageScope.
-4. Com a simulação aberta, use **File > Connect to Simulator**.
-5. Use **File > Import Layout** e escolha `advantagescope/layout.json`.
+   Ele grava os arquivos direto na pasta de modelos do AdvantageScope, troca os módulos swerve do
+   CAD por rodas de tank e alinha cada estágio no seu pivô.
+3. Compacte a pasta gerada para atualizar o zip em `modelo3d/`.
 
 ## O mecanismo
 
@@ -134,6 +146,7 @@ src/main/java/frc/robot
 src/test/java/frc/robot     testes JUnit
 tools                       geração do modelo 3D e do layout
 advantagescope              layout das abas
+modelo3d                    modelo 3D pronto para instalar
 ```
 
 ## Testes
@@ -157,7 +170,8 @@ prontas, as colisões, a coleta e o arremesso de bolas e os controles do robô c
 
 - CAD do braço:
   [FRC configurable Arm Robot](https://www.printables.com/model/1123646-frc-configurable-arm-robot),
-  publicado no Printables em 28/12/2024 com licença aberta (veja a página do modelo).
+  publicado no Printables em 28/12/2024 em domínio público (Creative Commons). O modelo em
+  `modelo3d/` é uma adaptação dele.
 - `campo/Campo.java` e `campo/Obstaculos.java` vêm da simulação 3D da equipe.
 - Base do projeto e `WPILib-License.md`: [WPILib](https://github.com/wpilibsuite/allwpilib).
 
